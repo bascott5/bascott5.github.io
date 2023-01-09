@@ -13,5 +13,5 @@ const Layout = ({ children }: props) => {
         </div>
     );
 }
-
+//TODO, put in _app.tsx?
 export default Layout;
