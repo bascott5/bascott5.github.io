@@ -3,22 +3,37 @@ body {
 }
 
 .navbar {
-    background-color: black;
+    background-color: rgb(249, 199, 133);
     position: sticky;
-    padding: 15px;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+
+.navbarText {
+    color: black;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+.navbarText:hover {
+    color: white;
 }
 
 .header {
     background-color: bisque;
-    font-size: 50px;
     text-align: center;
+    display: block;
+    font-size: 50px;
     padding: 50px;
+    margin: 0;
 }
 
 .text {
-    font-size: large;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
     padding-left: 50px;
     padding-right: 50px;
-    margin: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    line-height: 50px;
 }
