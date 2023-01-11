@@ -1,6 +1,7 @@
+//TODO: use window.scrollTo to make it so that instead of links, Home and About are buttons that scroll to their sections of the page
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = () => {    
     return (
         <nav className="navbar">
             <ul>
