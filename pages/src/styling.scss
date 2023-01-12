@@ -1,9 +1,9 @@
 body {
-    background-color: rgb(255, 244, 230);
+    background: white;
 }
 
 .navbar {
-    background-color: rgb(249, 199, 133);
+    background-color: black;
     position: sticky;
     overflow: hidden;
     display: block;
@@ -14,17 +14,20 @@ body {
 }
 
 .navbarText {
-    color: black;
+    color: lightgrey;
     text-decoration: none;
-    padding-right: 20px;
+    background: none!important;
+    border: none;
+    padding-right: 25px!important;
+    cursor: pointer;
 }
 
 .navbarText:hover {
-    color: white;
+   color: white;
 }
 
 .header {
-    background-color: bisque;
+    background: linear-gradient(0deg, white 0%, lightgrey 50%);
     text-align: center;
     display: block;
     font-size: 50px;
@@ -41,24 +44,30 @@ body {
     line-height: 50px;
 }
 
+.box {
+    
+}
+
 @mixin footer {
-    width: 50%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+    color: white;
+    width: 45%;
     height: 200px;
-    padding: 0;
-    margin: 0;
-    padding-block: 25px;
-    float: left;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
     overflow: hidden;
 }
 
 .footerLeft {
     @include footer;
-    background-color: red;
+    float: left;
 }
 
 .footerRight {
     @include footer;
-    background-color: yellow; 
+    float: right;
 }
 
 ::-webkit-scrollbar{

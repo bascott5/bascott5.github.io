@@ -1,5 +1,3 @@
-import Footer from "../footer";
-
 export default function Home() {
     return (
         <div>
@@ -9,7 +7,6 @@ export default function Home() {
                 <p>My knowledge of SEO (Search Engine Optimization) and graphic design will provide you with a quality, static website that will be sure to bring in the visitors. Plus, I am versed in both HTML and CSS, including CSS preprocessors like Sass, allowing me to make your website look all of the more stunning.</p>
                 <p>Check out my work below:</p>
             </div>
-        <Footer />
         </div>
     )
 }
