@@ -45,19 +45,22 @@ body {
 }
 
 .box {
-    
+    background: linear-gradient(0deg, rgba(0,0,0,1) 85%, rgba(255,255,255,1) 100%);
+    position: absolute;
+    z-index: -1;
+    width: 75%;
+    height: 280px;
 }
 
 @mixin footer {
-    background: linear-gradient(0deg, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 85%, rgba(255,255,255,1) 100%);
     color: white;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
     width: 45%;
     height: 200px;
-    padding-top: 100px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-    overflow: hidden;
+    padding: 50px 30px 30px 30px;
 }
 
 .footerLeft {
