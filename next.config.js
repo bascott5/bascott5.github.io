@@ -8,7 +8,7 @@ const nextConfig   = {
   assetPrefix: './',
 };
 
-module.exports = nextConfig;
+export default nextConfig;
 
 /*const nextConfig = {
   reactStrictMode: true,
