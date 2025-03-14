@@ -1,0 +1,270 @@
+@font-face {
+    font-family: "albert-sans";
+    src: url("assets/font/AlbertSans-Regular.ttf");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 4vh;
+    margin: 10px 0;
+    color: #584b53;
+}
+
+nav > a:nth-child(1), .identity-container > div > h2:nth-child(1) {
+    margin-left: 0;
+}
+
+nav > a {
+    all: unset;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 2vh;
+    font-size: 3vh;
+    vertical-align: middle;
+    font-family: albert-sans;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+}
+
+nav > hr {
+    background-color: #584b53;
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+header, section {
+    width: 100%;
+    height: 25%;
+    padding: 5vh 0 7vh 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header > img {
+    width: 35vh;
+    height: 35vh;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 50%;
+}
+
+.identity-container {
+    font-family: albert-sans;
+}
+
+.identity-container > h1 {
+    all: unset;
+    animation: slide-in 5s;
+    font-weight: bold;
+    font-size: 9vh;
+    color: #584b53;
+}
+
+.identity-container > div {
+    
+}
+
+.identity-container > div > h2 {
+    all: unset;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 1vh;
+    font-size: 3vh;
+    color: #584b53;
+}
+
+.identity-container > div > div {
+    display: inline-block;
+    background-color: #584b53;
+    border-radius: 50%;
+    width: 1vh;
+    height: 1vh;
+    vertical-align: middle;
+}
+
+#biography {
+    background-color: #ff1053;
+    text-align: center;
+    font-family: albert-sans;
+}
+
+#biography > h3, #projects > h3 {
+    all: unset;
+    font-size: 5vh;
+    color: whitesmoke;
+}
+
+#biography > p {
+    text-align: left;
+    margin: 1vh auto;
+    margin-bottom: 0;
+    color: whitesmoke;
+    font-size: 3vh;
+    width: 75%;
+}
+
+#biography > .circles > div, #projects > .circles > div {
+    background-color: whitesmoke;
+}
+
+#skills {
+    text-align: center;
+    font-family: albert-sans;
+}
+
+#skills > h3 {
+    all: unset;
+    font-size: 5vh;
+    color: #584b53;
+}
+
+#skills > .circles > div {
+    background-color: #584b53;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vh;
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 1vh;
+    justify-content: center;
+}
+
+.skills-container > div {
+    text-align: center;
+}
+
+.skills-container > div > h4 {
+    all: unset;
+    font-size: 3vh;
+    font-weight: bold;
+    color: #584b53;
+}
+
+.squares {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
+}
+
+.squares > div {
+    display: inline-block;
+    outline: 2px solid #584b53;
+    width: 3vh;
+    height: 3vh;
+    margin: 0 0.5vh;
+}
+
+.highlighted {
+    background-color: #584b53;
+}
+
+#projects {
+    background-color: #ff1053;
+    text-align: center;
+    font-family: albert-sans;
+}
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    width: 75%;
+    margin: 2vh auto;
+    margin-bottom: 0;
+}
+
+.project-container > a {
+    all: unset;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    display: flex;
+}
+
+.project-container > a > img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-container > a:hover > .description {
+    animation: slide-up 500ms ease;
+    display: block;
+}
+
+.description {
+    display: none;
+    position: absolute;
+    pointer-events: none;
+    text-align: left;
+    color: #584b53;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    padding: 3vh;
+    bottom: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.description > h5 {
+    all: unset;
+    font-family: albert-sans;
+    margin: 0;
+    margin-bottom: 1vh;
+    font-weight: bold;
+    display: block;
+    font-size: 3vh;
+}
+
+.description > p {
+    all: unset;
+    font-family: albert-sans;
+    margin: 0;
+    display: block;
+    font-size: 2vh;
+}
+
+.circles > div {
+    all: unset;
+    display: inline-block;
+    border-radius: 50%;
+    width: 1vh;
+    height: 1vh;
+    margin: 1vh 0.5vh;
+    vertical-align: text-top;
+}
+
+@keyframes slide-up {
+    from {
+        height: 0%;
+    }
+    to {
+        height: 100%;
+    }
+}
