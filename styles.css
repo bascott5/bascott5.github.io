@@ -88,7 +88,6 @@ header > img {
     all: unset;
     display: inline-block;
     vertical-align: middle;
-    margin: 0 1vh;
     font-size: 3vh;
     color: #584b53;
 }
@@ -98,6 +97,7 @@ header > img {
     background-color: #584b53;
     border-radius: 50%;
     width: 1vh;
+    margin: 0 1vh;
     height: 1vh;
     vertical-align: middle;
 }
@@ -192,7 +192,7 @@ header > img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
-    width: 75%;
+    width: 90%;
     margin: 2vh auto;
     margin-bottom: 0;
 }
@@ -258,6 +258,93 @@ header > img {
     height: 1vh;
     margin: 1vh 0.5vh;
     vertical-align: text-top;
+}
+
+@media screen and (max-width: 1020px) {
+    header  {
+        flex-direction: column;
+    }
+
+    header > img {
+        width: 30vh;
+        height: 30vh;
+    }
+
+    .identity-container {
+        text-align: center;
+        margin: 0 25px;
+    }
+
+    .identity-container > h1 {
+        font-size: 6vh;
+    }
+
+    .identity-container > div > h2 {
+        font-size: 2vh;
+    }
+
+    .identity-container > div > div {
+        width: 0.5vh;
+        height: 0.5vh;
+        margin: 0 0.5vh;
+    }
+
+    #biography > h3, #projects > h3 {
+        font-size: 4vh;
+    }
+    
+    #biography > p {
+        font-size: 2.5vh;
+    }
+
+    #skills > h3 {
+        font-size: 4vh;
+    }
+
+    .skills-container {
+        width: 90%;
+    }
+
+    .skills-container > div > h4 {
+        font-size: 2vh;
+    }
+    
+    .squares > div {
+        width: 2.5vh;
+        height: 2.5vh;
+        margin: 0 0.5vh;
+    }
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-container > a {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .project-container > a > img {
+        position: relative;
+        height: fit-content;
+    }
+
+    .description {
+        display: block;
+        position: relative;
+        width: fit-content;
+        height: fit-content;
+    }
+
+    .circles > div {
+        width: 0.5vh;
+        height: 0.5vh;
+    }
+
+    .project-container > a:hover > .description {
+        animation: none;
+    }
 }
 
 @keyframes slide-up {
