@@ -361,6 +361,19 @@ header > img {
     height: 75%;
 }
 
+footer {
+    background-color: #ff1053;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    margin: 0 3vh;
+    width: 5vh;
+}
+
 @media screen and (max-width: 1020px) {
     header  {
         flex-direction: column;
