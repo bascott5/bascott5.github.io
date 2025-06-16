@@ -277,7 +277,7 @@ header > img {
     margin-bottom: 1vh;
     font-weight: bold;
     display: none;
-    font-size: 3vh;
+    font-size: 2vw;
 }
 
 .description > p {
@@ -285,7 +285,7 @@ header > img {
     font-family: albert-sans;
     margin: 0;
     display: none;
-    font-size: 2vh;
+    font-size: 1vw;
 }
 
 .circles > div {
@@ -442,6 +442,14 @@ header > img {
 
     .description > h5, .description > p {
         display: block;
+    }
+
+    .description > h5 {
+        font-size: 3vh;
+    }
+
+    .description > p {
+        font-size: 2vh;
     }
 
     #project-container > a:hover > .description, 
