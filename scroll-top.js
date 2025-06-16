@@ -1,4 +1,4 @@
-let scrollTop = document.getElementById("scroll-top");
+const scrollTop = document.getElementById("scroll-top");
 
 document.addEventListener("scroll", () => {
     if (

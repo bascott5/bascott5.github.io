@@ -22,7 +22,7 @@ nav {
     color: #584b53;
 }
 
-nav > a:first-child, .identity-container > div > h2:nth-child(1) {
+nav > a:first-child, #identity-container > div > h2:nth-child(1) {
     margin-left: 0;
 }
 
@@ -71,25 +71,27 @@ header > img {
     object-fit: cover;
     object-position: center top;
     border-radius: 50%;
+    animation: header-appear 500ms ease;
 }
 
-.identity-container {
+#identity-container {
     font-family: albert-sans;
 }
 
-.identity-container > h1 {
+#identity-container > h1 {
     all: unset;
     animation: slide-in 5s;
     font-weight: bold;
     font-size: 9vh;
     color: #584b53;
+    animation: header-appear 500ms ease;
 }
 
-.identity-container > div {
-    
+#identity-container > div {
+    animation: header-appear 500ms ease;
 }
 
-.identity-container > div > h2 {
+#identity-container > div > h2 {
     all: unset;
     display: inline-block;
     vertical-align: middle;
@@ -97,7 +99,7 @@ header > img {
     color: #584b53;
 }
 
-.identity-container > div > div {
+#identity-container > div > div {
     display: inline-block;
     background-color: #584b53;
     border-radius: 50%;
@@ -148,7 +150,7 @@ header > img {
     background-color: #584b53;
 }
 
-.skills-container {
+#skills-container {
     display: flex;
     flex-wrap: wrap;
     gap: 5vh 3vh;
@@ -158,7 +160,7 @@ header > img {
     justify-content: center;
 }
 
-.skills-container > div {
+#skills-container > div {
     text-align: center;
     display: flex;
     justify-content: center;
@@ -166,11 +168,11 @@ header > img {
     flex-direction: column;
 }
 
-.skills-container > div > img {
+#skills-container > div > img {
     width: 15vh;
 }
 
-.skills-container > div > h4 {
+#skills-container > div > h4 {
     all: unset;
     font-size: 3vh;
     margin: 0.5vh 0;
@@ -203,7 +205,7 @@ header > img {
     font-family: albert-sans;
 }
 
-.project-container, .design-container {
+#project-container, #design-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
@@ -212,7 +214,7 @@ header > img {
     margin-bottom: 0;
 }
 
-.project-container > a, .design-container > div {
+#project-container > a, #design-container > div {
     all: unset;
     position: relative;
     width: 100%;
@@ -220,29 +222,29 @@ header > img {
     display: flex;
 }
 
-.project-container > a > img, 
-.design-container > div > img {
+#project-container > a > img, 
+#design-container > div > img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.design-container > div > img {
+#design-container > div > img {
     object-position: top;
 }
 
-.project-container > a:hover > .description, 
-.design-container > div:hover > .description {
+#project-container > a:hover > .description, 
+#design-container > div:hover > .description {
     height: 100%;
     display: block;
     padding: 3vh;
 }
 
-.project-container > a:hover > .description > h5,
-.project-container > a:hover > .description > p, 
-.design-container > div:hover > .description > h5,
-.design-container > div:hover > .description > p {
+#project-container > a:hover > .description > h5,
+#project-container > a:hover > .description > p, 
+#design-container > div:hover > .description > h5,
+#design-container > div:hover > .description > p {
     display: block;
 }
 
@@ -258,12 +260,12 @@ header > img {
     transition: height 500ms ease;
 }
 
-.project-container .description {
+#project-container .description {
     color: #584b53;
     background-color: whitesmoke;
 }
 
-.design-container .description {
+#design-container .description {
     color: whitesmoke;
     background-color: #ff1053;
 }
@@ -329,20 +331,20 @@ header > img {
         height: 40vh;
     }
 
-    .identity-container {
+    #identity-container {
         text-align: center;
         margin: 0 25px;
     }
 
-    .identity-container > h1 {
+    #identity-container > h1 {
         font-size: 8vh;
     }
 
-    .identity-container > div > h2 {
+    #identity-container > div > h2 {
         font-size: 2vh;
     }
 
-    .identity-container > div > div {
+    #identity-container > div > div {
         width: 0.5vh;
         height: 0.5vh;
         margin: 0 0.5vh;
@@ -361,11 +363,11 @@ header > img {
         font-size: 4vh;
     }
 
-    .skills-container {
+    #skills-container {
         width: 95%;
     }
 
-    .skills-container > div > h4 {
+    #skills-container > div > h4 {
         font-size: 2vh;
     }
     
@@ -375,18 +377,18 @@ header > img {
         margin: 0 0.5vh;
     }
 
-    .project-container, .design-container {
+    #project-container, #design-container {
         display: flex;
         flex-direction: column;
         width: 95%;
     }
 
-    .project-container > a, .design-container > div {
+    #project-container > a, #design-container > div {
         flex-direction: column;
         gap: 0;
     }
 
-    .project-container > a > img, .design-container > div > img {
+    #project-container > a > img, #design-container > div > img {
         position: relative;
         height: fit-content;
     }
@@ -404,17 +406,17 @@ header > img {
         display: block;
     }
 
-    .project-container > a:hover > .description, 
-    .design-container > div:hover > .description {
+    #project-container > a:hover > .description, 
+    #design-container > div:hover > .description {
         width: 100%;
         height: fit-content;
         padding: 3vh;
     }
 
-    .project-container > a:hover > .description > h5,
-    .project-container > a:hover > .description > p, 
-    .design-container > a:hover > .description > h5,
-    .design-container > a:hover > .description > p {
+    #project-container > a:hover > .description > h5,
+    #project-container > a:hover > .description > p, 
+    #design-container > a:hover > .description > h5,
+    #design-container > a:hover > .description > p {
         animation: none;
     }
 
@@ -435,8 +437,15 @@ header > img {
 @keyframes appear {
     from {
         opacity: 0;
+    } to {
+        opacity: 1;
     }
-    to {
+}
+
+@keyframes header-appear {
+    from {
+        opacity: 0;
+    } to {
         opacity: 1;
     }
 }
