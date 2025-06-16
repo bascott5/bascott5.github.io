@@ -321,6 +321,44 @@ header > img {
     width: 5vh;
 }
 
+#design-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit-modal {
+    position: absolute;
+    top: 1.5vh;
+    right: 1.5vh;
+    padding: 1vh;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #ff1053;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: background-color 100ms linear;
+}
+
+#exit-modal:hover {
+    background-color: #e10e4a;
+}
+
+#exit-modal img {
+    width: 5vh;
+}
+
+#design-modal > img {
+    width: 75%;
+    height: 75%;
+}
+
 @media screen and (max-width: 1020px) {
     header  {
         flex-direction: column;
