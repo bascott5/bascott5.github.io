@@ -22,8 +22,12 @@ nav {
     color: #584b53;
 }
 
-nav > a:nth-child(1), .identity-container > div > h2:nth-child(1) {
+nav > a:first-child, .identity-container > div > h2:nth-child(1) {
     margin-left: 0;
+}
+
+nav > a:last-child {
+    margin-right: 0;
 }
 
 nav > a {
@@ -299,9 +303,9 @@ header > img {
     border-radius: 50%;
     padding: 1vh;
     position: fixed;
-    display: flex;
-    bottom: 2vh;
-    right: 1vh;
+    display: none;
+    bottom: 1.5vh;
+    right: 1.5vh;
     justify-content: center;
     align-items: center;
     transition: background-color 100ms linear;
@@ -321,8 +325,8 @@ header > img {
     }
 
     header > img {
-        width: 30vh;
-        height: 30vh;
+        width: 40vh;
+        height: 40vh;
     }
 
     .identity-container {
@@ -331,7 +335,7 @@ header > img {
     }
 
     .identity-container > h1 {
-        font-size: 6vh;
+        font-size: 8vh;
     }
 
     .identity-container > div > h2 {
@@ -350,6 +354,7 @@ header > img {
     
     #biography > p {
         font-size: 2.5vh;
+        width: 90%;
     }
 
     #skills > h3 {
@@ -357,7 +362,7 @@ header > img {
     }
 
     .skills-container {
-        width: 90%;
+        width: 95%;
     }
 
     .skills-container > div > h4 {
@@ -373,6 +378,7 @@ header > img {
     .project-container, .design-container {
         display: flex;
         flex-direction: column;
+        width: 95%;
     }
 
     .project-container > a, .design-container > div {
@@ -423,5 +429,14 @@ header > img {
     }
     to {
         height: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
