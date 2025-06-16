@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    background-image: url("assets/bg.svg");
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
@@ -72,6 +73,7 @@ header > img {
     object-position: center top;
     border-radius: 50%;
     animation: header-appear 500ms ease;
+    outline: #ff1053 solid 2px;
 }
 
 #identity-container {
