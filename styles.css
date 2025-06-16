@@ -128,19 +128,19 @@ header > img {
     background-color: whitesmoke;
 }
 
-#skills {
+#skills, #designs {
     text-align: center;
     font-family: albert-sans;
     background: url("assets/decoration2.svg") no-repeat top, url("assets/decoration1.svg") no-repeat bottom;
 }
 
-#skills > h3 {
+#skills > h3, #designs > h3 {
     all: unset;
     font-size: 5vh;
     color: #584b53;
 }
 
-#skills > .circles > div {
+#skills > .circles > div, #designs > .circles > div {
     background-color: #584b53;
 }
 
@@ -199,16 +199,16 @@ header > img {
     font-family: albert-sans;
 }
 
-.project-container {
+.project-container, .design-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
-    width: 90%;
+    width: 85%;
     margin: 2vh auto;
     margin-bottom: 0;
 }
 
-.project-container > a {
+.project-container > a, .design-container > div {
     all: unset;
     position: relative;
     width: 100%;
@@ -216,21 +216,29 @@ header > img {
     display: flex;
 }
 
-.project-container > a > img {
+.project-container > a > img, 
+.design-container > div > img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.project-container > a:hover > .description {
+.design-container > div > img {
+    object-position: top;
+}
+
+.project-container > a:hover > .description, 
+.design-container > div:hover > .description {
     height: 100%;
     display: block;
     padding: 3vh;
 }
 
 .project-container > a:hover > .description > h5,
-.project-container > a:hover > .description > p {
+.project-container > a:hover > .description > p, 
+.design-container > div:hover > .description > h5,
+.design-container > div:hover > .description > p {
     display: block;
 }
 
@@ -238,14 +246,22 @@ header > img {
     position: absolute;
     pointer-events: none;
     text-align: left;
-    color: #584b53;
-    background-color: whitesmoke;
     width: 100%;
     height: 0%;
     bottom: 0;
     box-sizing: border-box;
     overflow: hidden;
     transition: height 500ms ease;
+}
+
+.project-container .description {
+    color: #584b53;
+    background-color: whitesmoke;
+}
+
+.design-container .description {
+    color: whitesmoke;
+    background-color: #ff1053;
 }
 
 .description > h5 {
@@ -274,6 +290,29 @@ header > img {
     height: clamp(8px, 1vh, 12px);
     margin: 1vh 0.5vh;
     vertical-align: text-top;
+}
+
+#scroll-top {
+    all: unset;
+    background-color: #584b53;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: 1vh;
+    position: fixed;
+    display: flex;
+    bottom: 2vh;
+    right: 1vh;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 100ms linear;
+}
+
+#scroll-top:hover {
+    background-color: #43383f;
+}
+
+#scroll-top img {
+    width: 5vh;
 }
 
 @media screen and (max-width: 1020px) {
@@ -331,17 +370,17 @@ header > img {
         margin: 0 0.5vh;
     }
 
-    .project-container {
+    .project-container, .design-container {
         display: flex;
         flex-direction: column;
     }
 
-    .project-container > a {
+    .project-container > a, .design-container > div {
         flex-direction: column;
         gap: 0;
     }
 
-    .project-container > a > img {
+    .project-container > a > img, .design-container > div > img {
         position: relative;
         height: fit-content;
     }
@@ -349,17 +388,32 @@ header > img {
     .description {
         display: block;
         position: relative;
-        width: fit-content;
+        width: 100%;
         height: fit-content;
         padding: 3vh;
+        animation: none;
     }
 
     .description > h5, .description > p {
         display: block;
     }
 
-    .project-container > a:hover > .description {
+    .project-container > a:hover > .description, 
+    .design-container > div:hover > .description {
+        width: 100%;
+        height: fit-content;
+        padding: 3vh;
+    }
+
+    .project-container > a:hover > .description > h5,
+    .project-container > a:hover > .description > p, 
+    .design-container > a:hover > .description > h5,
+    .design-container > a:hover > .description > p {
         animation: none;
+    }
+
+    #scroll-top {
+        display: none;
     }
 }
 
