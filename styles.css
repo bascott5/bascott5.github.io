@@ -8,6 +8,7 @@ html {
 }
 
 body {
+    background-image: url("assets/bg.svg");
     background-color: whitesmoke;
     margin: 0;
     padding: 0;
@@ -22,8 +23,12 @@ nav {
     color: #584b53;
 }
 
-nav > a:nth-child(1), .identity-container > div > h2:nth-child(1) {
+nav > a:first-child, #identity-container > div > h2:nth-child(1) {
     margin-left: 0;
+}
+
+nav > a:last-child {
+    margin-right: 0;
 }
 
 nav > a {
@@ -50,7 +55,7 @@ nav > hr {
 header, section {
     width: 100%;
     height: 25%;
-    padding: 5vh 0 7vh 0;
+    padding: 6vh 0 8vh 0;
     box-sizing: border-box;
 }
 
@@ -58,6 +63,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    background: url("assets/decoration1.svg") no-repeat bottom;
 }
 
 header > img {
@@ -66,25 +72,28 @@ header > img {
     object-fit: cover;
     object-position: center top;
     border-radius: 50%;
+    animation: header-appear 500ms ease;
+    outline: #ff1053 solid 2px;
 }
 
-.identity-container {
+#identity-container {
     font-family: albert-sans;
 }
 
-.identity-container > h1 {
+#identity-container > h1 {
     all: unset;
     animation: slide-in 5s;
     font-weight: bold;
     font-size: 9vh;
     color: #584b53;
+    animation: header-appear 500ms ease;
 }
 
-.identity-container > div {
-    
+#identity-container > div {
+    animation: header-appear 500ms ease;
 }
 
-.identity-container > div > h2 {
+#identity-container > div > h2 {
     all: unset;
     display: inline-block;
     vertical-align: middle;
@@ -92,7 +101,7 @@ header > img {
     color: #584b53;
 }
 
-.identity-container > div > div {
+#identity-container > div > div {
     display: inline-block;
     background-color: #584b53;
     border-radius: 50%;
@@ -127,38 +136,48 @@ header > img {
     background-color: whitesmoke;
 }
 
-#skills {
+#skills, #designs {
     text-align: center;
     font-family: albert-sans;
+    background: url("assets/decoration2.svg") no-repeat top, url("assets/decoration1.svg") no-repeat bottom;
 }
 
-#skills > h3 {
+#skills > h3, #designs > h3 {
     all: unset;
     font-size: 5vh;
     color: #584b53;
 }
 
-#skills > .circles > div {
+#skills > .circles > div, #designs > .circles > div {
     background-color: #584b53;
 }
 
-.skills-container {
+#skills-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 3vh;
+    gap: 5vh 3vh;
     margin: 0 auto;
-    width: 75%;
+    width: 85%;
     margin-top: 1vh;
     justify-content: center;
 }
 
-.skills-container > div {
+#skills-container > div {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.skills-container > div > h4 {
+#skills-container > div > img {
+    width: 15vh;
+}
+
+#skills-container > div > h4 {
     all: unset;
     font-size: 3vh;
+    margin: 0.5vh 0;
     font-weight: bold;
     color: #584b53;
 }
@@ -188,16 +207,16 @@ header > img {
     font-family: albert-sans;
 }
 
-.project-container {
+#project-container, #design-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 25px;
-    width: 90%;
+    width: 85%;
     margin: 2vh auto;
     margin-bottom: 0;
 }
 
-.project-container > a {
+#project-container > a, #design-container > div {
     all: unset;
     position: relative;
     width: 100%;
@@ -205,31 +224,52 @@ header > img {
     display: flex;
 }
 
-.project-container > a > img {
+#project-container > a > img, 
+#design-container > div > img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.project-container > a:hover > .description {
-    animation: slide-up 500ms ease;
+#design-container > div > img {
+    object-position: top;
+}
+
+#project-container > a:hover > .description, 
+#design-container > div:hover > .description {
+    height: 100%;
+    display: block;
+    padding: 3vh;
+}
+
+#project-container > a:hover > .description > h5,
+#project-container > a:hover > .description > p, 
+#design-container > div:hover > .description > h5,
+#design-container > div:hover > .description > p {
     display: block;
 }
 
 .description {
-    display: none;
     position: absolute;
     pointer-events: none;
     text-align: left;
-    color: #584b53;
-    background-color: whitesmoke;
     width: 100%;
-    height: 100%;
-    padding: 3vh;
+    height: 0%;
     bottom: 0;
     box-sizing: border-box;
     overflow: hidden;
+    transition: height 500ms ease;
+}
+
+#project-container .description {
+    color: #584b53;
+    background-color: whitesmoke;
+}
+
+#design-container .description {
+    color: whitesmoke;
+    background-color: #ff1053;
 }
 
 .description > h5 {
@@ -238,26 +278,100 @@ header > img {
     margin: 0;
     margin-bottom: 1vh;
     font-weight: bold;
-    display: block;
-    font-size: 3vh;
+    display: none;
+    font-size: 2vw;
 }
 
 .description > p {
     all: unset;
     font-family: albert-sans;
     margin: 0;
-    display: block;
-    font-size: 2vh;
+    display: none;
+    font-size: 1vw;
 }
 
 .circles > div {
     all: unset;
     display: inline-block;
     border-radius: 50%;
-    width: 1vh;
-    height: 1vh;
+    width: clamp(8px, 1vh, 12px);
+    height: clamp(8px, 1vh, 12px);
     margin: 1vh 0.5vh;
     vertical-align: text-top;
+}
+
+#scroll-top {
+    all: unset;
+    background-color: #584b53;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    padding: 1vh;
+    position: fixed;
+    display: none;
+    bottom: 1.5vh;
+    right: 1.5vh;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 100ms linear;
+}
+
+#scroll-top:hover {
+    background-color: #43383f;
+}
+
+#scroll-top img {
+    width: 5vh;
+}
+
+#design-modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#exit-modal {
+    position: absolute;
+    top: 1.5vh;
+    right: 1.5vh;
+    padding: 1vh;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #ff1053;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transition: background-color 100ms linear;
+}
+
+#exit-modal:hover {
+    background-color: #e10e4a;
+}
+
+#exit-modal img {
+    width: 5vh;
+}
+
+#design-modal > img {
+    width: 75%;
+    height: 75%;
+}
+
+footer {
+    background-color: #ff1053;
+    padding: 2vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer img {
+    margin: 0 3vh;
+    width: 5vh;
 }
 
 @media screen and (max-width: 1020px) {
@@ -266,24 +380,24 @@ header > img {
     }
 
     header > img {
-        width: 30vh;
-        height: 30vh;
+        width: 40vh;
+        height: 40vh;
     }
 
-    .identity-container {
+    #identity-container {
         text-align: center;
         margin: 0 25px;
     }
 
-    .identity-container > h1 {
-        font-size: 6vh;
+    #identity-container > h1 {
+        font-size: 8vh;
     }
 
-    .identity-container > div > h2 {
+    #identity-container > div > h2 {
         font-size: 2vh;
     }
 
-    .identity-container > div > div {
+    #identity-container > div > div {
         width: 0.5vh;
         height: 0.5vh;
         margin: 0 0.5vh;
@@ -295,17 +409,18 @@ header > img {
     
     #biography > p {
         font-size: 2.5vh;
+        width: 90%;
     }
 
     #skills > h3 {
         font-size: 4vh;
     }
 
-    .skills-container {
-        width: 90%;
+    #skills-container {
+        width: 95%;
     }
 
-    .skills-container > div > h4 {
+    #skills-container > div > h4 {
         font-size: 2vh;
     }
     
@@ -315,17 +430,18 @@ header > img {
         margin: 0 0.5vh;
     }
 
-    .project-container {
+    #project-container, #design-container {
         display: flex;
         flex-direction: column;
+        width: 95%;
     }
 
-    .project-container > a {
+    #project-container > a, #design-container > div {
         flex-direction: column;
         gap: 0;
     }
 
-    .project-container > a > img {
+    #project-container > a > img, #design-container > div > img {
         position: relative;
         height: fit-content;
     }
@@ -333,17 +449,40 @@ header > img {
     .description {
         display: block;
         position: relative;
-        width: fit-content;
+        width: 100%;
         height: fit-content;
-    }
-
-    .circles > div {
-        width: 0.5vh;
-        height: 0.5vh;
-    }
-
-    .project-container > a:hover > .description {
+        padding: 3vh;
         animation: none;
+    }
+
+    .description > h5, .description > p {
+        display: block;
+    }
+
+    .description > h5 {
+        font-size: 3vh;
+    }
+
+    .description > p {
+        font-size: 2vh;
+    }
+
+    #project-container > a:hover > .description, 
+    #design-container > div:hover > .description {
+        width: 100%;
+        height: fit-content;
+        padding: 3vh;
+    }
+
+    #project-container > a:hover > .description > h5,
+    #project-container > a:hover > .description > p, 
+    #design-container > a:hover > .description > h5,
+    #design-container > a:hover > .description > p {
+        animation: none;
+    }
+
+    #scroll-top {
+        display: none;
     }
 }
 
@@ -353,5 +492,21 @@ header > img {
     }
     to {
         height: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+
+@keyframes header-appear {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
     }
 }

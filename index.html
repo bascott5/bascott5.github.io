@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Bennett Scott's Portfolio</title>
 </head>
@@ -13,23 +14,23 @@
         <a href="#skills">Skills</a>
         <hr>
         <a href="#projects">Projects</a>
+        <hr>
+        <a href="#designs">Designs</a>
     </nav>
-    <!-- Slice SVG background into parts for each section in order -->
-    <main>
-        <header>
-            <img src="assets/pfp.png" alt="Portrait">
-            <div class="identity-container">
-                <h1>Bennett Scott</h1>
-                <div>
-                    <h2>Web Developer</h2>
-                    <div></div>
-                    <h2>UI/UX Designer</h2>
-                    <div></div>
-                    <h2>Professional</h2>
-                </div>
+    <header>
+        <img src="assets/pfp.png" alt="Portrait">
+        <div id="identity-container">
+            <h1>Bennett Scott</h1>
+            <div>
+                <h2>Web Developer</h2>
+                <div></div>
+                <h2>UI/UX Designer</h2>
+                <div></div>
+                <h2>Professional</h2>
             </div>
-            
-        </header>
+        </div>
+    </header>
+    <main>
         <section id="biography">
             <h3>Biography</h3>
             <div class="circles">
@@ -58,8 +59,9 @@
                 <div></div>
                 <div></div>
             </div>
-            <div class="skills-container">
+            <div id="skills-container">
                 <div>
+                    <img src="assets/javascript.svg" alt="JavaScript">
                     <h4>Javascript</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
@@ -70,6 +72,7 @@
                     </div>
                 </div>
                 <div>
+                    <img src="assets/typescript.svg" alt="TypeScript">
                     <h4>Typescript</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
@@ -80,47 +83,8 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Go</h4>
-                    <div class="squares">
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <h4>Python</h4>
-                    <div class="squares">
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <h4>Java</h4>
-                    <div class="squares">
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <h4>SQL</h4>
-                    <div class="squares">
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <h4>HTML & CSS</h4>
+                    <img src="assets/html.svg" alt="HTML">
+                    <h4>HTML</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
                         <div class="highlighted"></div>
@@ -130,6 +94,18 @@
                     </div>
                 </div>
                 <div>
+                    <img src="assets/css.svg" alt="CSS">
+                    <h4>CSS</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/angular.svg" alt="Angular">
                     <h4>Angular</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
@@ -140,6 +116,106 @@
                     </div>
                 </div>
                 <div>
+                    <img src="assets/figma.svg" alt="Figma">
+                    <h4>Figma</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/adobe-xd.svg" alt="Adobe XD">
+                    <h4>Adobe XD</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/git.svg" alt="Git">
+                    <h4>Git</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/python.svg" alt="Python">
+                    <h4>Python</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/dart.svg" alt="Dart">
+                    <h4>Dart</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/go.svg" alt="Go">
+                    <h4>Go</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/java.svg" alt="Java">
+                    <h4>Java</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/postgres.svg" alt="Postgres">
+                    <h4>Postgres</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/sqlite.svg" alt="SQLite">
+                    <h4>SQLite</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/react.svg" alt="React">
                     <h4>React.js</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
@@ -150,17 +226,8 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Express.js</h4>
-                    <div class="squares">
-                        <div class="highlighted"></div>
-                        <div class="highlighted"></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-                <div>
-                    <h4>Git</h4>
+                    <img src="assets/nextjs.svg" alt="NextJS">
+                    <h4>NextJS</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
                         <div class="highlighted"></div>
@@ -170,11 +237,23 @@
                     </div>
                 </div>
                 <div>
+                    <img src="assets/linux.svg" alt="Linux">
                     <h4>Linux</h4>
                     <div class="squares">
                         <div class="highlighted"></div>
                         <div class="highlighted"></div>
                         <div class="highlighted"></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/express.svg" alt="Express">
+                    <h4>Express.js</h4>
+                    <div class="squares">
+                        <div class="highlighted"></div>
+                        <div class="highlighted"></div>
+                        <div></div>
                         <div></div>
                         <div></div>
                     </div>
@@ -194,12 +273,12 @@
                 <div></div>
                 <div></div>
             </div>
-            <div class="project-container">
+            <div id="project-container">
                 <a href="https://bascott5.github.io/cards/">
                     <img src="assets/project9.png" alt="Project 9">
                     <div class="description">
                         <h5>Cards</h5>
-                        <p> A client-side web app for moving around and using a deck of playing cards.</p>
+                        <p>A client-side web app for moving around and using a deck of playing cards.</p>
                     </div>
                 </a>
                 <a href="https://bascott5.github.io/playlist/">
@@ -260,6 +339,60 @@
                 </a>
             </div>
         </section>
+        <section id="designs">
+            <h3>Designs</h3>
+            <div class="circles">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="design-container">
+                <div>
+                    <img src="assets/design3.png" alt="Design 3">
+                    <div class="description">
+                        <h5>HyperEngineer</h5>
+                        <p>I've built a prototype for HyperEngineer's home page, a blog I want to work on that shares my knowledge of front-end design and development.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/design2.png" alt="Design 2">
+                    <div class="description">
+                        <h5>ThoughtMap</h5>
+                        <p>I built a full prototype that showcases the ideas I had for a web app where users can map out their thoughts in a graph-based format.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="assets/design1.png" alt="Design 1">
+                    <div class="description">
+                        <h5>Web Playlist</h5>
+                        <p>From design to implementation, I started working on my web playlist project by prototyping it.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <a href="https://www.github.com/bascott5">
+            <img src="assets/github.svg" alt="Github">
+        </a>
+        <a href="https://www.linkedin.com/in/bennett-scott-1705b5231">
+            <img src="assets/linkedin.svg" alt="LinkedIn">
+        </a>
+    </footer>
+    <dialog id="design-modal">
+        <div id="exit-modal">
+            <img src="assets/x.svg" alt="Exit">
+        </div>
+        <img alt="Design">
+    </dialog>
+    <div id="scroll-top">
+        <img src="assets/up.svg" alt="Up">
+    </div>
 </body>
 </html>
