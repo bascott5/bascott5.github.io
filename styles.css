@@ -375,6 +375,10 @@ footer img {
 }
 
 @media screen and (max-width: 1020px) {
+    nav > a {
+        margin: 0 1vh;
+    }
+
     header  {
         flex-direction: column;
     }
@@ -390,7 +394,7 @@ footer img {
     }
 
     #identity-container > h1 {
-        font-size: 8vh;
+        font-size: 6vh;
     }
 
     #identity-container > div > h2 {
